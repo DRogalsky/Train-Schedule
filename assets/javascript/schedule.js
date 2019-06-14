@@ -33,3 +33,12 @@ $('#submit').on('click', function(event) {
         frequency: frequency
     });
 });
+
+database.ref().on('child_added', function(childSnapshot) {
+    let newRow = $('<tr>');
+    newRow.append($('<td>').text(childSnapshot.val().name));
+    newRow.append($('<td>').text(childSnapshot.val().destination));
+    newRow.append($('<td>').text(childSnapshot.val().frequency));
+
+    table.append(newRow);
+})

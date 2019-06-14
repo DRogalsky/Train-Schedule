@@ -1,3 +1,8 @@
 h1 {
     font-size: 4em;
 }
+
+#container {
+    width: 700px;
+    margin: 0 atuo;
+}
