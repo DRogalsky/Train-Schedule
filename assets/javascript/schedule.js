@@ -19,22 +19,22 @@ let name = "";
 let destination = "";
 let frequency = "";
 
-$('#submit').on('click', function(event) {
+$('#submit').on('click', function (event) {
     event.preventDefault();
+    if (nameBox.val() !== "" && destinationBox.val() !== "" && frequencyBox.val() !== "") {
+        name = nameBox.val().trim();
+        destination = destinationBox.val().trim();
+        frequency = frequencyBox.val().trim();
 
-    name = nameBox.val().trim();
-    destination = destinationBox.val().trim();
-    frequency = frequencyBox.val().trim();
-
-    database.ref().push({
-
-        name: name,
-        destination: destination,
-        frequency: frequency
-    });
+        database.ref().push({
+            name: name,
+            destination: destination,
+            frequency: frequency
+        });
+    }
 });
 
-database.ref().on('child_added', function(childSnapshot) {
+database.ref().on('child_added', function (childSnapshot) {
     let newRow = $('<tr>');
     newRow.append($('<td>').text(childSnapshot.val().name));
     newRow.append($('<td>').text(childSnapshot.val().destination));

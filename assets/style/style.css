@@ -4,5 +4,55 @@ h1 {
 
 #container {
     width: 700px;
-    margin: 0 atuo;
+    margin: 0 auto;
+}
+
+table {
+    margin: 1em;
+}
+
+th {
+    background: black;
+    color: white;
+}
+
+th, td {
+    margin: 1em;
+    padding: 1em 3em;
+    border: 1px solid black;
+}
+
+form {
+    border: 1px solid black;
+}
+
+form *{
+    padding: 0.5em;
+}
+
+form p {
+    margin-left: 0.5em;
+    font-size: 1.25em;
+}
+
+form input {
+    padding: 0.25em;
+    margin: 0.5em;
+    width: 95%;
+}
+
+form button {
+    display: block;
+    margin: 0.5em;
+    font-size: 1.25em;
+    border: none;
+    background: #1D2951;
+    color: white;
+    border-radius: 10%
+}
+
+h3{
+    background: black;
+    color: white;
+    font-size: 2em;
 }
