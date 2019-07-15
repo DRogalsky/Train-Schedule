@@ -19,6 +19,8 @@
                 <th>Trian Name</th>
                 <th>Destination</th>
                 <th>Frequency</th>
+                <th>Next Train</th>
+                <th>Minutes Away</th>
             </tr>
         </table>
 
@@ -31,7 +33,10 @@
             <p>Destination:</p>
             <input type="text" id='destination'>
 
-            <p>Frequency:</p>
+            <p>First Train(HH:mm - military time):</p>
+            <input type="text" id='firstTime'>
+
+            <p>Frequency(minutes):</p>
             <input type="text" id='frequency'>
             <button id='submit'>Submit</button>
         </form>
@@ -42,6 +47,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
     <script src="assets/javascript/schedule.js"></script>
 </body>
 
